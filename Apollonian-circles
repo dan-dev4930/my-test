@@ -1,0 +1,21 @@
+import math
+
+def apollonius_theorem(a, b, gamma_degrees):
+    # Перевести угол из градусов в радианы
+    gamma_radians = math.radians(gamma_degrees)
+
+    # Вычислить косинус угла между катетами
+    cos_gamma = math.cos(gamma_radians)
+
+    # Вычислить квадрат гипотенузы по теореме Аполлония
+    c_squared = a**2 + b**2 + 2*a*b*cos_gamma
+
+    return c_squared
+
+# Пример использования
+a = 3
+b = 4
+gamma_degrees = 90  # Угол между катетами (прямой угол)
+c_squared = apollonius_theorem(a, b, gamma_degrees)
+
+print(f"Для треугольника с катетами {a}, {b} и углом между катетами {gamma_degrees} градусов, гипотенуза равна {math.sqrt(c_squared)}")
