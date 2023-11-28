@@ -1,0 +1,21 @@
+def is_equilateral_triangle(side1, side2, side3):
+    # Check if all sides are equal
+    if side1 == side2 == side3:
+        return True
+    else:
+        return False
+
+def main():
+    # Get input from the user
+    side1 = float(input("Enter the length of side 1: "))
+    side2 = float(input("Enter the length of side 2: "))
+    side3 = float(input("Enter the length of side 3: "))
+
+    # Check if it's an equilateral triangle
+    if is_equilateral_triangle(side1, side2, side3):
+        print("The triangle is equilateral, and all angles are 60 degrees.")
+    else:
+        print("The triangle is not equilateral.")
+
+if __name__ == "__main__":
+    main()
