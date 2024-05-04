@@ -1,0 +1,11 @@
+def check_fermat(a, b, c, n):
+    if n <= 2:
+        print("The value of n must be greater than 2.")
+        return
+    if a**n + b**n == c**n:
+        print("Holy smokes, Fermat was wrong!")
+    else:
+        print("No, that doesn't work.")
+
+# Example usage:
+check_fermat(3, 4, 5, 2)
